@@ -15,16 +15,16 @@
     </form>
     <div>
         @foreach($data as $value)
-
-        <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">
+        
+            
+            <div class="">
                         <h3 class="card-title">{{$value->name}}</h3>
-                    </div>
-        @endforeach
+            </div>
+            @endforeach
         
 
-    </div>
+            
+        
     </div>
 </body>
 </html>
