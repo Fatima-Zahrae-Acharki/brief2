@@ -23,3 +23,5 @@ Route::get('/test', function () {
 });
 
 Route::post('insert', [crudController::class, 'insert'])->name('insert');
+
+Route::get('/test', [crudController::class, 'show']);

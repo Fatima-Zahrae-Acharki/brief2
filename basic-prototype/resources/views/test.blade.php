@@ -13,6 +13,18 @@
         <input type="text" name="name" placeholder=" enter a promotion ">
         <input type="submit" value="ADD">
     </form>
+    <div>
+        @foreach($data as $value)
+
+        <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">{{$value->name}}</h3>
+                    </div>
+        @endforeach
+        
+
+    </div>
     </div>
 </body>
 </html>

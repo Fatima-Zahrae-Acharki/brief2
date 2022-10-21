@@ -11,7 +11,11 @@ class crudController extends Controller
         $promo = new promotion;
         $promo->name = $request->name;
         $promo->save();
-        redirect('test');
+        redirect('/test');
+        
     }
-    public function show(){}
+    public function show(){
+        $data = promotion::All();
+        return view('test', compact('data'));
+    }
 }
