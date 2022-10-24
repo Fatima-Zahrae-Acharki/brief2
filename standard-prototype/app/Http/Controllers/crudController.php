@@ -18,5 +18,11 @@ class crudController extends Controller
         $data = promotion::All();
         return view('test', compact('data'));
     }
-    
+    public function edit_promotion($id){
+       $promotion = new Promotion where id = $id;
+  
+    }
+    public function update_promotion(Request $request){
+        
+    }
 }
