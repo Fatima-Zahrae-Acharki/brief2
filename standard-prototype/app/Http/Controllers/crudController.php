@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\promotion;
+use Illuminate\Support\Facades\Redirect;
 
 class crudController extends Controller
 {
@@ -18,11 +19,13 @@ class crudController extends Controller
         $data = promotion::All();
         return view('test', compact('data'));
     }
+
     public function edit_promotion($id){
-       $promotion = new Promotion where id = $id;
-  
+       $promotion = Promotion::where('id', $id)->get();
+       return view('edit',compact('promotion'));
     }
-    public function update_promotion(Request $request){
-        
+    public function update(Request $request, $id){
+        $promotion = Promotion::where('id', $id)->update(['name'=>$request->name]);
+        return redirect('test');
     }
 }

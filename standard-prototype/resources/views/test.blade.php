@@ -7,19 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    
     <form action="{{'insert'}}" method="POST">
         @csrf
-        <input type="text" name="name" placeholder=" enter a promotion ">
+        <input type="text" name="name" placeholder=" Enter a promotion ">
         <input type="submit" value="ADD">
     </form>
-    <div>
+    <!-- <div>
         @foreach($data as $value)
             <div class="">
                 <h3 class="card-title">{{$value->name}}</h3>
             </div>
         @endforeach
         
-    </div>
+    </div> -->
+    <table>
+            <thead>
+                <th>Name</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+            @foreach ($data as $value)
+                <tr>
+                    <td>{{$value->id}}</td>
+                    <td>{{$value->name}} </td>
+                    <td>
+                        <a href="{{url ('edit')}}/{{$value->id}}">Edit</a>
+                    </td>
+                </tr>
+            @endforeach
+                
+            </tbody>
+    </table>
+
 </body>
 </html>
