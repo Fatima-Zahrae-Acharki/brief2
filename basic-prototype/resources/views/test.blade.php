@@ -15,15 +15,10 @@
     </form>
     <div>
         @foreach($data as $value)
-        
-            
             <div class="">
-                        <h3 class="card-title">{{$value->name}}</h3>
+                <h3 class="card-title">{{$value->name}}</h3>
             </div>
-            @endforeach
-        
-
-            
+        @endforeach
         
     </div>
 </body>
