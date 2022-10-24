@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\crudController as ControllersCrudController;
 use Illuminate\Http\Request;
 use App\Models\promotion;
 use Illuminate\Support\Facades\Redirect;
@@ -28,4 +29,11 @@ class crudController extends Controller
         $promotion = Promotion::where('id', $id)->update(['name'=>$request->name]);
         return redirect('test');
     }
+
+    // public function destroy($id)
+    // {
+    //     $promotion = Promotion::where('id', $id)->get();
+    //     $promotion->delete();
+    //     return redirect('/test');
+    // }
 }

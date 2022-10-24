@@ -28,3 +28,6 @@ Route::get('/test', [crudController::class, 'show']);
 
 Route::get('edit/{id}', [crudController::class, 'edit_promotion']); 
 Route::post('update/{id}', [crudController::class, 'update']);
+
+
+// Route::delete('delete/{id}',array('test' => 'crudController@destroy', 'as' => 'test'));

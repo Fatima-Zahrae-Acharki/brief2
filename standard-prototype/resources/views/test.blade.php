@@ -33,7 +33,14 @@
                     <td>{{$value->name}} </td>
                     <td>
                         <a href="{{url ('edit')}}/{{$value->id}}">Edit</a>
+                        <!-- <a href="{{ url('/test', ['id' => $value->id]) }}">
+            <button class="btn btn-default">
+            Delete
+            </button>
+          </a> -->
+
                     </td>
+
                 </tr>
             @endforeach
                 
