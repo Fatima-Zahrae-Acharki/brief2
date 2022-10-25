@@ -13,6 +13,7 @@
         <input type="text" name="name" placeholder=" Enter a promotion ">
         <input type="submit" value="ADD">
     </form>
+    <br>
     <!-- <div>
         @foreach($data as $value)
             <div class="">
@@ -23,6 +24,7 @@
     </div> -->
     <table>
             <thead>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Action</th>
             </thead>
