@@ -31,10 +31,13 @@ class crudController extends Controller
     }
 
 
-    public function Delete($id)
-    {
+    public function delete(Request $request, $id){
+        $promotion = Promotion::where('id', $id)->delete(['name'=>$request->name]);
         promotion::where('id', $id)->delete();
         return redirect("test");
+        // promotion::where('id', $request->id)->delete();
+        // return redirect("test");
+
     }
 
     // public function destroy($id)
@@ -43,4 +46,25 @@ class crudController extends Controller
     //     $promotion->delete();
     //     return redirect('/test');
     // }
+
+    // public function search(){
+    //     $data = Promotion::where('name', 'like', '%'.$this->request->name.'%');
+    //     return view('test', compact('promotion'));
+    // }
+    // public function search($name){
+    //     $data = Promotion::where('name', 'like', "%$name%")->get;
+    //     return view('test', compact('promotion'));
+    // }
+
+    public function search($searchResult = null){
+        if(
+            $searchResult == null){
+                $data = promotion::all();
+                return $data;
+            }
+        else{
+            $data = Promotion::where('name', 'like', "% . $searchResult . %")->get();
+            return $data;
+        }
+    }
 }

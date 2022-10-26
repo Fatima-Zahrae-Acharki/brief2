@@ -35,8 +35,11 @@
                     <td>{{$value->name}} </td>
                     <td>
                         <a href="{{url ('edit')}}/{{$value->id}}">Edit</a>
-                        
-                        <a href="{{ url('/test', ['id' => $value->id]) }}">Delete</a>
+                        <!-- <a href="{{ url('/test', ['id' => $value->id]) }}">Delete</a>
+                        <a href="{{url ('test')}}/{{$value->id}}">delete</a>
+                        <a href="test/{{$value->id}}">Delete</a> -->
+                        <a href="{{ url('test') }}?id={{ $value->id }}">Delete</a>
+
 
                     </td>
 
@@ -45,6 +48,8 @@
                 
             </tbody>
     </table>
+    <br>
+    <input type="text" id="search" placeholder="Search">
 
 </body>
 </html>
