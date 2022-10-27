@@ -18,5 +18,4 @@ class crudController extends Controller
         $data = promotion::All();
         return view('test', compact('data'));
     }
-    
 }
