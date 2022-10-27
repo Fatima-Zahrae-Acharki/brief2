@@ -7,13 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <br>
     <form action="{{'insert'}}" method="POST">
         @csrf
         <input type="text" name="name" placeholder=" Enter a promotion ">
         <input type="submit" value="ADD">
     </form>
     <br>
+    
     <!-- <div>
         @foreach($data as $value)
             <div class="">
@@ -22,6 +23,7 @@
         @endforeach
         
     </div> -->
+    <h2>promotions</h2>
     <div id="paragraph" >
     <table>
             <thead>
