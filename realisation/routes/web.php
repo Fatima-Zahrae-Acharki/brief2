@@ -50,11 +50,7 @@ Route::get('search/{searchResult}', [crudController::class, 'search']);
 
 //-----------------------------------start of apprentices --------------------------------
 
-
-// Route::post('insert', [apprenticesController::class, 'insert_student'])->name('insert');
-
-// Route::get('/test', [apprenticesController::class, 'show_student']);
-
+Route::get('addStudent',[apprenticesController::class, 'addStudent']);
 
 // Route::get('edit/edit/{id}', [apprenticesController::class, 'edit_student']); 
 // Route::post('edit/update/{id}', [apprenticesController::class, 'update_student']);

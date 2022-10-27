@@ -14,12 +14,15 @@
         <input type="text" name="name" value="{{$row->name}}" >
         <button>submit</button>
     </form>
+    <br><br>
+    
+    <a href="{{url('addStudent')}}"><button>add student</button></a>
+    
 @endforeach
 
 
-<br><br>
 
 
-<input type="button" value="Add apprentices">
+
 </body>
 </html>
