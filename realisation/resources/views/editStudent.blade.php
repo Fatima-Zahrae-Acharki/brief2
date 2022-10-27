@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,9 @@
 @foreach($promotion as $row)
 <form action="{{url('update')}}/{{$row->id}}" method="POST">
         @csrf
-        <input type="text" name="name" value="{{$row->name}}" >
+        <input type="text" name="first_name" value="{{$row->first_name}}" >
+        <input type="text" name="last_name" value="{{$row->last_name}}" >
+        <input type="text" name="email" value="{{$row->email}}" >
         <button>submit</button>
     </form>
 @endforeach
@@ -19,7 +20,5 @@
 
 <br><br>
 
-
-<input type="button" value="Add apprentices">
 </body>
 </html>

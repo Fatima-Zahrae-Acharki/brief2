@@ -8,6 +8,7 @@
 </head>
 <body>
     <br>
+    <h2>Add promotions</h2>
     <form action="{{'insert'}}" method="POST">
         @csrf
         <input type="text" name="name" placeholder=" Enter a promotion ">
@@ -42,8 +43,6 @@
                         <a href="{{url ('test')}}/{{$value->id}}">delete</a>
                         <a href="test/{{$value->id}}">Delete</a> -->
                         <a href="{{ url('test') }}?id={{ $value->id }}">Delete</a>
-
-
                     </td>
 
                 </tr>
