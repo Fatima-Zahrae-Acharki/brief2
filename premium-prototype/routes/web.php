@@ -36,4 +36,5 @@ Route::post('update/{id}', [crudController::class, 'update']);
 // Route::get("delete/{id}", [crudController::class, 'delete']);
 Route::get('delete/{id}', [crudController::class, 'delete']);
 // Route::delete('delete/{id}',array('test' => 'crudController@destroy', 'as' => 'test'));
-
+Route::get('search', [crudController::class, 'search']);
+Route::get('search/{searchResult}', [crudController::class, 'search']);

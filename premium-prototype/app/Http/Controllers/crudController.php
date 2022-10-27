@@ -57,13 +57,12 @@ class crudController extends Controller
     // }
 
     public function search($searchResult = null){
-        if(
-            $searchResult == null){
+        if($searchResult == null){
                 $data = promotion::all();
                 return $data;
             }
         else{
-            $data = Promotion::where('name', 'like', "% . $searchResult . %")->get();
+            $data = Promotion::where('name', 'like', '%' . $searchResult . '%')->get();
             return $data;
         }
     }

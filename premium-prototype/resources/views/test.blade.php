@@ -22,6 +22,7 @@
         @endforeach
         
     </div> -->
+    <div id="paragraph" >
     <table>
             <thead>
                 <th>Id</th>
@@ -32,7 +33,7 @@
             @foreach ($data as $value)
                 <tr>
                     <td>{{$value->id}}</td>
-                    <td>{{$value->name}} </td>
+                    <td  >{{$value->name}} </td>
                     <td>
                         <a href="{{url ('edit')}}/{{$value->id}}">Edit</a>
                         <!-- <a href="{{ url('/test', ['id' => $value->id]) }}">Delete</a>
@@ -48,8 +49,13 @@
                 
             </tbody>
     </table>
+    </div>
     <br>
+     
     <input type="text" id="search" placeholder="Search">
+
+
+    <script src="/promotion.js"></script>
 
 </body>
 </html>
