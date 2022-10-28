@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
     <link rel="stylesheet" href="/test.css">
     <title>Document</title>
 </head>
@@ -40,9 +41,6 @@
                     <td  >{{$value->name}} </td>
                     <td>
                         <button class="btn1"><a href="{{url ('edit')}}/{{$value->id}}" class="btn1">Edit</a></button>
-                        <!-- <a href="{{ url('/test', ['id' => $value->id]) }}">Delete</a>
-                        <a href="{{url ('test')}}/{{$value->id}}">delete</a>
-                        <a href="test/{{$value->id}}">Delete</a> -->
                         <button class="btn2"><a href="{{('delete')}}/{{$value->id}}" class="btn2">Delete</a></button>
                     </td>
 
@@ -53,9 +51,9 @@
     </table>
     </div>
     <br>
-     
     <input type="text" id="search" placeholder="Search">
-
+    <img src="img/search.png" id="image" >
+    
     <br><br>
     <script src="/promotion.js"></script>
 
