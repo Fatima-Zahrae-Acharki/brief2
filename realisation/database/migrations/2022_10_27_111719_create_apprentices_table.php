@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('email')->nullable(); 
             $table->unsignedBigInteger('promotion_id'); //serve as the key which u'll reference the id of promotions(foreign)
             $table->foreign('promotion_id')->references('id')->on('promotions');
-            $table->timestamps();
+    
         });
     }
 

@@ -28,7 +28,7 @@ Route::get('/test', function () {
 Route::post('insert', [crudController::class, 'insert'])->name('insert');
 
 Route::get('/test', [crudController::class, 'show']);
-
+Route::get('delete/{id}',[crudController::class, 'deletePromo']);
 
 
 Route::get('edit/{id}', [crudController::class, 'edit_promotion']); 
@@ -50,7 +50,20 @@ Route::get('search/{searchResult}', [crudController::class, 'search']);
 
 //-----------------------------------start of apprentices --------------------------------
 
-Route::get('addStudent',[apprenticesController::class, 'addStudent']);
+Route::get('addStudent/{id}',[apprenticesController::class, 'addStudent']);
+Route::post('insert_student',[apprenticesController::class, 'insert_student']);
+Route::get('edt_S/{id}',[apprenticesController::class, 'edt_S']);
+Route::post('updateS/{id}',[apprenticesController::class, 'updateS']);
+Route::get('edit/delete/{id}',[apprenticesController::class, 'delete']);
+
+
+
+
+
+
+
+
+
 
 // Route::get('edit/edit/{id}', [apprenticesController::class, 'edit_student']); 
 // Route::post('edit/update/{id}', [apprenticesController::class, 'update_student']);

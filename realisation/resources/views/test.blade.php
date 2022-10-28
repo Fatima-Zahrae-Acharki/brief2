@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/test.css">
     <title>Document</title>
 </head>
 <body>
     <br>
     <h2>Add promotions</h2>
-    <form action="{{'insert'}}" method="POST">
+    <form action="{{'insert'}}" method="POST" >
         @csrf
-        <input type="text" name="name" placeholder=" Enter a promotion ">
-        <input type="submit" value="ADD">
+        <input id="inp" type="text" name="name" placeholder=" Enter a promotion ">
+        <input id="inpbtn" type="submit" value="ADD">
     </form>
     <br>
     
@@ -38,11 +39,11 @@
                     <td>{{$value->id}}</td>
                     <td  >{{$value->name}} </td>
                     <td>
-                        <a href="{{url ('edit')}}/{{$value->id}}">Edit</a>
+                        <button class="btn1"><a href="{{url ('edit')}}/{{$value->id}}" class="btn1">Edit</a></button>
                         <!-- <a href="{{ url('/test', ['id' => $value->id]) }}">Delete</a>
                         <a href="{{url ('test')}}/{{$value->id}}">delete</a>
                         <a href="test/{{$value->id}}">Delete</a> -->
-                        <a href="{{ url('test') }}?id={{ $value->id }}">Delete</a>
+                        <button class="btn2"><a href="{{('delete')}}/{{$value->id}}" class="btn2">Delete</a></button>
                     </td>
 
                 </tr>
@@ -55,7 +56,7 @@
      
     <input type="text" id="search" placeholder="Search">
 
-
+    <br><br>
     <script src="/promotion.js"></script>
 
 </body>

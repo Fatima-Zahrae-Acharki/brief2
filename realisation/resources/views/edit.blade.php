@@ -5,22 +5,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/edit.css">
     <title>Document</title>
 </head>
 <body>
+    <br><br>
 @foreach($promotion as $row)
 <form action="{{url('update')}}/{{$row->id}}" method="POST">
         @csrf
-        <input type="text" name="name" value="{{$row->name}}" >
-        <button>submit</button>
+        <input id="inp" type="text" name="name" value="{{$row->name}}" >
+        <button id="inpbtn">submit</button>
     </form>
     <br><br>
     
-    <a href="{{url('addStudent')}}"><button>add student</button></a>
+    <a href="{{url('addStudent')}}/{{$row->id}}"><button  id="add">Add student</button></a>
     
 @endforeach
+<br><br>
+
+<div>
+
+        
+         <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            @foreach ($student as $row)
+            <tbody>
 
 
+                <tr>
+                    <td>{{$row->id}}</td>
+                    <td>{{$row->first_name}}</td>
+                    <td>{{$row->last_name}}</td>
+                    <td>{{$row->email}}</td>
+                    <td>
+                        <a href="{{url ('edt_S/')}}/{{$row->id}}" id="btn1">Edit</a>
+                        <a href="{{('delete')}}/{{$row->id}}" id="btn2">Delete</a>
+                    </td>
+                </tr>
+
+
+            </tbody>
+            @endforeach
+         </table>
+         
 
 
 
